@@ -1,0 +1,39 @@
+---
+// You can keep your component metadata here
+---
+
+<div class="fact-container">
+  <p id="random-fact" class="italic">Loading a fun fact...</p>
+</div>
+
+<script>
+  const facts = [
+    "My high school mascot was a camel",
+    "I’ve lived in three states, Ohio, Kentucky, and Maryland",
+    "My favorite color is blue",
+    "I am a University of Cincinnati graduate #gobearcats",
+    "I choose Spotify over Apple Music",
+    "I am a Christian",
+    "The New Living Translation is my favorite bible translation",
+    "I know how to drive a manual transmission",
+    "I am an extrovert",
+    "Summer is my favorite season",
+    "Longhorn Steakhouse is my favorite restaurant",
+    "I can never remember how to spell ‘definitely’",
+    "I am a fan of boy bands",
+    "Mt. Dew is my favorite soft drink",
+    "I have seen every episode of Lost",
+  ];
+
+  // Function to pick and display a fact
+  const displayRandomFact = () => {
+    const factElement = document.getElementById("random-fact");
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    if (factElement) {
+      factElement.textContent = facts[randomIndex];
+    }
+  };
+
+  // Run on page load
+  displayRandomFact();
+</script>
