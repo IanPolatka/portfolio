@@ -47,6 +47,23 @@ h6 {
   background-color: var(--background-default);
 }
 
+.hero-section {
+  /* Set the path to your image */
+  background-image: url("hero-background.jpg");
+
+  /* Ensure the image covers the entire area */
+  background-size: cover;
+
+  /* Pin the image to the bottom right */
+  background-position: right top;
+
+  /* Prevent the image from tiling/repeating */
+  background-repeat: no-repeat;
+
+  /* Optional: Ensure the container has enough height to show the image */
+  width: 100%;
+}
+
 .spotify-green-background {
   background-color: var(--spotify-green-light);
 }
