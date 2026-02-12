@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import DavMagazine from "../assets/dav-magazine/dav-banner.jpg";
+import WSC from "../assets/wsc/winter-sports-clinic-thumb-banner.jpg";
+---
+
+<section class="bg-white border-t border-gray-300 px-10 md:px-0">
+  <div
+    class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+  >
+    <div class="mb-4">
+      <h2 class="text-2xl font-semibold text-black mb-2">
+        Selected Case Studies
+      </h2>
+      <p class="large-paragraph md:w-3/5 mb-4 md:mb-0 leading-8">
+        Read my thought process of defining a problem, and the solution that was
+        determined.
+      </p>
+    </div>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/dav-magazine-case-study" class="flex flex-col mb-4 md:mb-0">
+        <li>
+          <Image
+            src={DavMagazine}
+            alt="DAV Magazine Landing Page Case Study"
+            class="mb-[20px] w-full rounded-md border border-gray-300 aspect-auto mx-auto"
+          />
+          <div class="flex flex-col">
+            <h4 class="mb-2 font-semibold large-paragraph leading-8">
+              DAV Magazine Landing Page Case Study
+            </h4>
+            <p class="leading-8 mb-4">
+              DAV’s Magazine, a veteran magazine for those who served, has been
+              in a printed circulation since the 1960s. Limited magazine
+              articles were posted on DAV’s website, and it was requested that a
+              more robust magazine section be built out on the website.
+            </p>
+            <span>View Case Study</span>
+          </div>
+        </li>
+      </a>
+      <a href="/winter-sports-clinic-case-study" class="flex flex-col">
+        <li>
+          <Image
+            src={WSC}
+            alt="Winter Sports Clinic Case Study"
+            class="mb-[20px] w-full rounded-md border border-gray-300 aspect-auto mx-auto"
+          />
+          <h4 class="mb-2 font-semibold large-paragraph leading-8">
+            Winter Sports Clinic Case Study
+          </h4>
+          <p class="leading-8 mb-4">
+            See how a site that hadn’t had a visual update in roughly 10 years
+            was restructured to meet the changing user’s need while at the same
+            time giving it a more modern look and feel.
+          </p>
+          <span>View Case Study</span>
+        </li>
+      </a>
+    </ul>
+  </div>
+</section>

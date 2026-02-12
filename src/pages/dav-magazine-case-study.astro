@@ -1,0 +1,506 @@
+---
+import Layout from "../layouts/BlogPost.astro";
+import { Image } from "astro:assets";
+import dav from "../assets/dav-magazine/dav-banner-dark.jpg";
+import currentMagazine from "../assets/dav-magazine/current-magazine.jpg";
+import existingComponents from "../assets/dav-magazine/existing-components.jpg";
+import initialWireframes from "../assets/dav-magazine/initial-wireframes.jpg";
+import highFidelityWireframes from "../assets/dav-magazine/high-fidelity-wireframes.jpg";
+import featuredPost from "../assets/dav-magazine/featured-post.jpg";
+import defaultArticleRow from "../assets/dav-magazine/default-article-row.jpg";
+import secondaryArticleRow from "../assets/dav-magazine/secondary-article-row.jpg";
+import wideArticleRow from "../assets/dav-magazine/wide-article-row.jpg";
+---
+
+<Layout
+  title="DAV Magazine Case Study"
+  description="Lorem ipsum dolor sit amet"
+  pubDate={new Date("August 08 2021")}
+>
+  <section class="default-background border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h1 class="text-2xl md:text-3xl font-semibold mb-4">
+            DAV Digital Magazine Landing Page
+          </h1>
+          <p class="text-xl lg:text-2xl mb-4 leading-10">
+            DAV’s Magazine, a veteran publication for those who served, has been
+            in print circulation since the 1960s, providing members with the
+            latest organizational news.
+          </p>
+        </div>
+      </div>
+
+      <Image
+        src={dav}
+        alt="DAV Magazine Landing Page Case Study"
+        class="w-full border border-gray-300 aspect-auto mx-auto"
+      />
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <!-- <div
+      class="container mx-auto lg:px-[60px] pt-[255px] md:pt-[284px] -mt-[40px] sm:-mt-[255px] sm:-mt-[284px] lg:-mt-[352px] pb-[30px] lg:pt-[352px] md:border-l md:border-r border-gray-300"
+    > -->
+    <div
+      class="container mx-auto px-[20px] lg:px-[60px] pb-[40px] -mt-[40px] pt-[40px] sm:-mt-[219px] sm:pt-[219px] md:-mt-[255px] md:pt-[255px] lg:-mt-[293px] lg:pt-[293px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full pb-4 justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Project Brief</h2>
+          <p class="mb-4 leading-8">
+            The DAV magazine is a printed and mailed publication that circulates
+            news about the organization to its nearly one million members. The
+            magazine features articles on initiatives undertaken by the
+            organization, updates on leadership, topics of interest to veterans,
+            staff appointments, and membership deaths.
+          </p>
+          <p class="mb-5 leading-8">
+            Limited magazine articles were posted on DAV’s website
+            (https://www.dav.org), and it was requested that a more robust
+            magazine section be built out on the website.
+          </p>
+
+          <p class="mb-2 font-semibold !text-black">
+            The list of requirements:
+          </p>
+          <ul class="list-disc list-inside leading-loose">
+            <li>
+              All articles/content from the magazine are to be present on the
+              website.
+            </li>
+            <li>
+              A full archive of all DAV magazines dating back to the 1960s.
+            </li>
+            <li>A downloadable version of each magazine.</li>
+            <li>Sections organized by categories.</li>
+            <li>The ability for the user to listen to the article.</li>
+            <li>
+              Call to actions to alert veterans/users to DAV programs when it is
+              relevant to the article information.
+            </li>
+            <li>
+              Connect individual articles to other related magazine articles.
+            </li>
+            <li>A form for users to submit an inquiry request.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Feature Goals</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <!-- Grid Items -->
+            <div class="bg-sky-50 border border-sky-200 rounded p-4">
+              <p class="!text-sky-700 font-semibold mb-2">1. User Engagement</p>
+              <p>Increase user engagement with the magazine articles.</p>
+            </div>
+            <div class="bg-sky-50 border border-sky-200 rounded p-4">
+              <p class="!text-sky-700 font-semibold mb-2">2. Content Sharing</p>
+              <p>
+                Create the ability for magazine content to be shared on social
+                media, and then linked back to the site.
+              </p>
+            </div>
+            <div class="bg-sky-50 border border-sky-200 rounded p-4">
+              <p class="!text-sky-700 font-semibold mb-2">
+                3. Search Functionality
+              </p>
+              <p>
+                All website content will be able to be searchable through the
+                site search functionality.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Current Landing Page</h2>
+          <p class="mb-5 leading-8">
+            The current landing page is limited in terms of the content
+            available on the dav.org website. Notably, there are no individual
+            articles on this page, and the scope of any previous magazine
+            content is missing. Clicking on any of the links directs the user to
+            a third-party site that presents a PDF layout. This limitation
+            restricts the SEO and searchability of dav.org, which is a stated
+            objective of this project to address.
+          </p>
+          <Image
+            src={currentMagazine}
+            alt="DAV Magazine Landing Page Case Study"
+            class="w-full border border-gray-300 aspect-auto mx-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Research Phase</h2>
+          <p class="mb-5 leading-8">
+            This involved reviewing the latest magazines with the team
+            responsible for their creation and production. All content was
+            categorized and discussed in detail, considering how each piece
+            could be integrated into the website. Questions such as “Could
+            anything be left out?”, “What should we do with this section?”, and
+            “How can we incorporate articles from the earliest magazines?” were
+            thoroughly explored as a team. Current magazines were analyzed to
+            determine their flow and identify any potential similarities that
+            could be replicated on the website. The stakeholders expressed their
+            preference for websites like https://www.theatlantic.com and
+            https://www.nytimes.com, and inquired if the new landing page layout
+            could be designed to have a similar aesthetic.
+          </p>
+          <p class="mb-2 font-semibold !text-black">
+            It was determined that all magazine articles had to fit within one
+            of these categories:
+          </p>
+          <ul class="list-disc list-inside leading-loose mb-5">
+            <li>Veteran Stories</li>
+            <li>Commentaries</li>
+            <li>Service Spotlight</li>
+            <li>Letters</li>
+            <li>Legislative Spotlight</li>
+            <li>Staff Appointments</li>
+            <li>Reflections</li>
+            <li>In Remembrance</li>
+          </ul>
+
+          <p class="mb-2">
+            Although all articles could stand on their own, there was still a
+            desire to connect to them with the magazine issue.  So each article
+            would not only have one category (listed above) tied to them, but
+            also a magazine edition tag (example: November | December 2025
+            Edition) would be required as well.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Page Structure</h2>
+          <p class="mb-5 leading-8">
+            The solution that I came up with was to include all categories on
+            the magazine landing page in chronological order, and organize them
+            by content, but also providing the flexibility for featured posts to
+            be certain articles to appear in more prominent spots. This resulted
+            in a content structure that would be laid out by the following
+            order:
+          </p>
+          <ul class="list-disc list-inside leading-loose mb-5">
+            <li>Featured Article</li>
+            <li>Recent Articles</li>
+            <li>Inquiry Request Call to Action</li>
+            <li>Commentary</li>
+            <li>Service Spotlight</li>
+            <li>Legislative Spotlight</li>
+            <li>Staff Appointment</li>
+            <li>Reflection</li>
+            <li>In Remembrance</li>
+            <li>Letters</li>
+            <li>Magazine Editions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Existing Components</h2>
+          <p class="mb-5 leading-8">
+            Before any wireframes were created, existing site components were
+            assessed to see if any could be reused, so the wheel wasn’t being
+            re-created.  It was determined that we could reuse our action box
+            component, news post component, page title component, and tweak a
+            few others to build out the landing page.
+          </p>
+          <Image
+            src={existingComponents}
+            alt="DAV Magazine Landing Page Case Study"
+            class="w-full border border-gray-300 aspect-auto mx-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Initial Wireframes</h2>
+          <p class="mb-5 leading-8">
+            The top post will be the newest featured post, while the rest of the
+            categories (articles, commentaries, staff appointments, reflections,
+            in remembrance, service spotlights, legislative spotlights, and a
+            random article from the archives) will be displayed.
+          </p>
+
+          <p class="mb-5 leading-8">
+            So now users can click through each of the existing magazine
+            articles.  They can see them structured by content type and share
+            links with others and across social media channels.
+          </p>
+        </div>
+      </div>
+      <Image
+        src={initialWireframes}
+        alt="DAV Magazine Landing Page Case Study"
+        class="w-full border border-gray-300 aspect-auto mx-auto"
+      />
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">High Fidelity Wireframes</h2>
+          <p class="mb-5 leading-8">
+            As noted before, articles were organized by category, with links to
+            archives of each category section.  To view a list of all the
+            magazines as downloadable PDFs, a section was added to the bottom of
+            the page.
+          </p>
+
+          <p class="mb-5 leading-8">
+            So now users can click through each of the existing magazine
+            articles.  They can see them structured by content type, and share
+            links with others and across social media channels.
+          </p>
+        </div>
+      </div>
+      <Image
+        src={highFidelityWireframes}
+        alt="DAV Magazine Landing Page Case Study"
+        class="w-full border border-gray-300 aspect-auto mx-auto"
+      />
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto pt-[40px] lg:py-[50px] px-[20px] lg:px-[60px] lg:pt-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Explanation of Components</h2>
+
+          <p class="font-semibold mb-4 !text-black">
+            Featured/Highlighted Post
+          </p>
+
+          <p class="mb-5 leading-8">
+            These types of posts get a full-width treatment to highlight their
+            importance. Listed at the top and middle of the page, users can
+            easily identify that there is more significance to what content is
+            in this article.
+          </p>
+        </div>
+      </div>
+      <Image
+        src={featuredPost}
+        alt="DAV Magazine Landing Page Case Study"
+        class="w-full border border-gray-300 aspect-auto mx-auto"
+      />
+    </div>
+
+    <div
+      class="container mx-auto pt-[40px] lg:py-[50px] px-[20px] lg:px-[60px] lg:pt-[20px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <p class="font-semibold mb-4 !text-black">Default Article Row</p>
+
+          <p class="mb-5 leading-8">
+            A maximum of 4 stories display in a row.  The category is listed at
+            the top to provide a clear hierarchy for users with a link in the
+            form of a double chevron to navigate the user to an archive list of
+            all articles in that category.  A featured image will be present for
+            each article, and will be clickable to navigate to the article, the
+            same with the title.  The summary gives a preview of what the
+            article is about and the date is present to show when the article
+            was published.  The author will be linked to the author’s page, so
+            users can see all articles they have published.
+          </p>
+        </div>
+      </div>
+      <Image
+        src={defaultArticleRow}
+        alt="DAV Magazine Landing Page Case Study"
+        class="w-full border border-gray-300 aspect-auto mx-auto"
+      />
+    </div>
+
+    <div
+      class="container mx-auto px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <p class="font-semibold mb-4 !text-black">Secondary Article Row</p>
+
+          <p class="mb-5 leading-8">
+            Four articles are also displayed in this component, but a more
+            prominent article takes precedence on the left side.  All articles
+            share the same features: a featured image, title, summary, author,
+            and published date.
+          </p>
+        </div>
+      </div>
+      <Image
+        src={secondaryArticleRow}
+        alt="DAV Magazine Landing Page Case Study"
+        class="w-full border border-gray-300 aspect-auto mx-auto"
+      />
+    </div>
+
+    <div
+      class="container mx-auto py-[40px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <p class="font-semibold mb-4 !text-black">Wide Article Row</p>
+
+          <p class="mb-5 leading-8">
+            Three articles highlight this layout. This one is used more for
+            posts where the featured image is a profile shot.
+          </p>
+        </div>
+      </div>
+      <Image
+        src={wideArticleRow}
+        alt="DAV Magazine Landing Page Case Study"
+        class="w-full border border-gray-300 aspect-auto mx-auto"
+      />
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] px-[20px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-medium mb-5">
+            How Success Will Be Measured
+          </h2>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <!-- Grid Items -->
+            <div class="bg-green-50 border border-green-200 rounded p-4">
+              <p class="!text-green-700 font-semibold mb-2">1. Cost Savings</p>
+              <p>
+                With all the magazine content residing on the website, future
+                reduction in printing costs will be a reality.
+              </p>
+            </div>
+            <div class="bg-green-50 border border-green-200 rounded p-4">
+              <p class="!text-green-700 font-semibold mb-2">
+                2. Content Sharing
+              </p>
+              <p>
+                Users will share content on social media that will be trackable
+                with UTM link tracking.
+              </p>
+            </div>
+            <div class="bg-green-50 border border-green-200 rounded p-4">
+              <p class="!text-green-700 font-semibold mb-2">
+                3. Search Functionality
+              </p>
+              <p>
+                Magazine content will be searched by users on the site,
+                including all legacy articles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="default-background border-t border-gray-300 px-10 md:px-0">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="md:flex items-start justify-between">
+        <div class="md:pr-6">
+          <h2 class="text-2xl font-medium text-black mb-2">Work With Me</h2>
+          <p class="large-paragraph mb-4">
+            Are you wanting to work with me in the future, or are you looking
+            for more information about me? Use the links below to either contact
+            me or find out more about my professional experience.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 justify-start">
+            <a href="/contact-me" class="btn"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+                height="18"
+                width="18"
+              >
+                <path
+                  d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9L229.2 276.1c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8l496.9-178z"
+                ></path></svg
+              >
+              Contact Me</a
+            >
+            <a
+              href="/ian-polatka-resume.pdf"
+              target="_blank"
+              class="btn btn-transparent"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                height="18"
+                width="18"
+                ><path
+                  d="M224.6 12.8c56.2-56.2 147.4-56.2 203.6 0s56.2 147.4 0 203.6l-164 164c-34.4 34.4-90.1 34.4-124.5 0s-34.4-90.1 0-124.5L292.5 103.3c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L185 301.3c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l164-164c31.2-31.2 31.2-81.9 0-113.1s-81.9-31.2-113.1 0l-164 164c-53.1 53.1-53.1 139.2 0 192.3s139.2 53.1 192.3 0L428.3 284.3c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L343.4 459.6c-78.1 78.1-204.7 78.1-282.8 0s-78.1-204.7 0-282.8l164-164z"
+                ></path></svg
+              >
+              View My Resumé</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

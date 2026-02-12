@@ -1,0 +1,369 @@
+---
+import Layout from "../layouts/BlogPost.astro";
+import { Image } from "astro:assets";
+import wsc from "../assets/wsc/wsc-banner-dark.jpg";
+import currentSite from "../assets/wsc/existing-site.jpg";
+import moodBoard from "../assets/wsc/mood-board.png";
+import styleGuide from "../assets/wsc/style-guide.png";
+import fonts from "../assets/wsc/fonts.png";
+import icons from "../assets/wsc/icons.png";
+import homePage from "../assets/wsc/home-page.jpg";
+import aboutPage from "../assets/wsc/about-page.jpg";
+---
+
+<Layout
+  title="Winter Sports Clinic Case Study"
+  description="Lorem ipsum dolor sit amet"
+  pubDate={new Date("August 08 2021")}
+>
+  <section class="default-background border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h1 class="text-2xl md:text-3xl font-semibold mb-4">
+            Winter Sports Clinic Site Redesign
+          </h1>
+
+          <p class="text-xl lg:text-2xl mb-4 leading-10">
+            The National Disabled Veterans Winter Sports Clinic is the world
+            leader in rehabilitation.
+          </p>
+
+          <p class="text-xl lg:text-2xl mb-4 leading-10">
+            Participating Veterans experience “Miracles on a Mountainside” as
+            they are provided with training in adaptive Alpine and Nordic
+            skiing, sled hockey, scuba diving, rock wall climbing and a number
+            of other adaptive activities, sports and education.
+          </p>
+
+          <p class="text-xl lg:text-2xl mb-4 leading-10">
+            The clinic, which began in 1987 with 90 participants, has grown to
+            assist nearly 400 profoundly disabled Veterans.
+          </p>
+        </div>
+      </div>
+
+      <Image
+        src={wsc}
+        alt="Winter Sports Clinic Case Study"
+        class="w-full border border-gray-300 aspect-auto mx-auto"
+      />
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <!-- <div
+      class="container mx-auto lg:px-[60px] pt-[255px] md:pt-[284px] -mt-[40px] sm:-mt-[255px] sm:-mt-[284px] lg:-mt-[352px] pb-[30px] lg:pt-[352px] md:border-l md:border-r border-gray-300"
+    > -->
+    <div
+      class="container mx-auto px-[20px] lg:px-[60px] pb-[40px] -mt-[40px] pt-[40px] sm:-mt-[219px] sm:pt-[219px] md:-mt-[255px] md:pt-[255px] lg:-mt-[293px] lg:pt-[293px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full pb-4 justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Redesign Brief</h2>
+          <p class="mb-4 leading-8">
+            The website was created over 10 years ago with no major visual
+            update, and its age was showing. With the organization migrating
+            this site to a new content management system, this was a good time
+            to rethink the site. This process started with rethinking the
+            content structure. Thinking through clear calls to action on all
+            pages, and driving the user to get involved with the clinic through
+            volunteering, participating, or donating.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Feature Goals</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <!-- Grid Items -->
+            <div class="bg-sky-50 border border-sky-200 rounded p-4">
+              <p class="!text-sky-700 font-semibold mb-2">
+                1. Modern Coat of Paint
+              </p>
+              <p>Bring the look and feel into the last few years.</p>
+            </div>
+            <div class="bg-sky-50 border border-sky-200 rounded p-4">
+              <p class="!text-sky-700 font-semibold mb-2">
+                2. Restructure Content
+              </p>
+              <p>
+                Focus on core user groups, participant, volunteer, sponsor, and
+                donor. Drive user flow to facilitate each of their needs/wants.
+              </p>
+            </div>
+            <div class="bg-sky-50 border border-sky-200 rounded p-4">
+              <p class="!text-sky-700 font-semibold mb-2">
+                3. New CMS Migration
+              </p>
+              <p>
+                Build the site into the contact management of choice within the
+                organization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Current Landing Page</h2>
+          <p class="mb-5 leading-8">
+            The current landing page is limited in terms of the content
+            available on the dav.org website. Notably, there are no individual
+            articles on this page, and the scope of any previous magazine
+            content is missing. Clicking on any of the links directs the user to
+            a third-party site that presents a PDF layout. This limitation
+            restricts the SEO and searchability of dav.org, which is a stated
+            objective of this project to address.
+          </p>
+          <Image
+            src={currentSite}
+            alt="DAV Magazine Landing Page Case Study"
+            class="w-full border border-gray-300 aspect-auto mx-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Mood Board</h2>
+          <p class="mb-5 leading-8">
+            Once the content restructure was complete, a mood board was created.
+            Since the event largely revolved around winter mountain activities
+            looking through mountain landscapes and typography textures started
+            the design process.
+          </p>
+          <Image
+            src={moodBoard}
+            alt="DAV Magazine Landing Page Case Study"
+            class="w-full border border-gray-300 aspect-auto mx-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Style Guide</h2>
+          <p class="mb-5 leading-8">
+            The existing site did use the brand colors, but didn’t expand beyond
+            the blue and red that was present in the logo. A variety of reds,
+            blues, grays, and yellows were added because building with 1 version
+            of each color is limiting and adding different saturations allows
+            more variety in site components.
+          </p>
+          <Image
+            src={styleGuide}
+            alt="DAV Magazine Landing Page Case Study"
+            class="w-full border border-gray-300 aspect-auto mx-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Fonts</h2>
+          <p class="mb-5 leading-8">
+            With this program being a collaboration between the Veterans Affairs
+            and the Disabled American Veterans, font styles don’t match. The
+            solution was to pick and choose from each site, so for headings the
+            Bitter font was used which is from the VA site, and Roboto was the
+            choice for the body font which is used on the DAV website.
+          </p>
+          <Image
+            src={fonts}
+            alt="DAV Magazine Landing Page Case Study"
+            class="w-full border border-gray-300 aspect-auto mx-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Icons</h2>
+          <p class="mb-5 leading-8">
+            Icons were sourced from a variety of sources to drive home the
+            programs of the event.
+          </p>
+          <Image
+            src={icons}
+            alt="DAV Magazine Landing Page Case Study"
+            class="w-full border border-gray-300 aspect-auto mx-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">Home Page</h2>
+          <p class="mb-5 leading-8">
+            Putting everything together the home page resulted in the following.
+          </p>
+        </div>
+      </div>
+      <Image
+        src={homePage}
+        alt="DAV Magazine Landing Page Case Study"
+        class="w-full border border-gray-300 aspect-auto mx-auto"
+      />
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-semibold mb-5">About Page</h2>
+          <p class="mb-5 leading-8">
+            The user can see information about the clinic, with the call to
+            action to get involved mid-way down the page.
+          </p>
+        </div>
+      </div>
+      <Image
+        src={aboutPage}
+        alt="DAV Magazine Landing Page Case Study"
+        class="w-full border border-gray-300 aspect-auto mx-auto"
+      />
+    </div>
+  </section>
+
+  <section class="bg-white border-t border-gray-300">
+    <div
+      class="container mx-auto py-[40px] px-[20px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="flex flex-col w-full justify-center">
+        <div class="w-3/4 md:w-2/3 mx-auto">
+          <h2 class="text-2xl font-medium mb-5">
+            How Success Will Be Measured
+          </h2>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <!-- Grid Items -->
+            <div class="bg-green-50 border border-green-200 rounded p-4">
+              <p class="!text-green-700 font-semibold mb-2">
+                1. Updated Design
+              </p>
+              <p>
+                Users will get a sense that this program is still active and
+                thriving when see the site is refreshed with a modern interface.
+              </p>
+            </div>
+            <div class="bg-green-50 border border-green-200 rounded p-4">
+              <p class="!text-green-700 font-semibold mb-2">
+                2. User Flow Improvements
+              </p>
+              <p>
+                Users will find what they need faster equaling more
+                participants/volunteers and sponsorships/donations.
+              </p>
+            </div>
+            <div class="bg-green-50 border border-green-200 rounded p-4">
+              <p class="!text-green-700 font-semibold mb-2">
+                3. Content Management Happiness
+              </p>
+              <p>
+                Content managers will be in the CMS that they are used to using
+                with most of our other DAV managed websites.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="default-background border-t border-gray-300 px-10 md:px-0">
+    <div
+      class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    >
+      <div class="md:flex items-start justify-between">
+        <div class="md:pr-6">
+          <h2 class="text-2xl font-medium text-black mb-2">Work With Me</h2>
+          <p class="large-paragraph mb-4">
+            Are you wanting to work with me in the future, or are you looking
+            for more information about me? Use the links below to either contact
+            me or find out more about my professional experience.
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-4 justify-start">
+            <a href="/contact-me" class="btn"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+                height="18"
+                width="18"
+              >
+                <path
+                  d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9L229.2 276.1c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8l496.9-178z"
+                ></path></svg
+              >
+              Contact Me</a
+            >
+            <a
+              href="/ian-polatka-resume.pdf"
+              target="_blank"
+              class="btn btn-transparent"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                height="18"
+                width="18"
+                ><path
+                  d="M224.6 12.8c56.2-56.2 147.4-56.2 203.6 0s56.2 147.4 0 203.6l-164 164c-34.4 34.4-90.1 34.4-124.5 0s-34.4-90.1 0-124.5L292.5 103.3c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L185 301.3c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l164-164c31.2-31.2 31.2-81.9 0-113.1s-81.9-31.2-113.1 0l-164 164c-53.1 53.1-53.1 139.2 0 192.3s139.2 53.1 192.3 0L428.3 284.3c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L343.4 459.6c-78.1 78.1-204.7 78.1-282.8 0s-78.1-204.7 0-282.8l164-164z"
+                ></path></svg
+              >
+              View My Resumé</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
