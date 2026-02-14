@@ -135,6 +135,18 @@ Buttons
   fill: var(--link-color);
 }
 
+.btn-dribbble {
+  color: white;
+  background-color: var(--dribbble-pink);
+  border-color: var(--dribbble-pink);
+}
+
+.btn-spotify {
+  color: white;
+  background-color: var(--spotify-green);
+  border-color: var(--spotify-green);
+}
+
 /******************************
 Header
 *******************************/
