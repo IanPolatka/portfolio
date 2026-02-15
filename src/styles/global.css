@@ -114,6 +114,10 @@ h6 {
   animation: slideFadeIn 0.8s ease-out forwards;
 }
 
+ul {
+  color: var(--default-text-color);
+}
+
 /******************************
 Buttons
 *******************************/
