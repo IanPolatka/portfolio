@@ -7,10 +7,20 @@ import tailwindcss from "@tailwindcss/vite";
 
 import netlify from "@astrojs/netlify";
 
+import partytown from "@astrojs/partytown";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://ianpolatka.com",
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

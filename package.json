@@ -11,10 +11,12 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/netlify": "^6.6.4",
+    "@astrojs/partytown": "^2.1.4",
     "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "^3.7.0",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.17.1",
+    "astro-seo": "^1.1.0",
     "sharp": "^0.34.3",
     "tailwindcss": "^4.1.18"
   },

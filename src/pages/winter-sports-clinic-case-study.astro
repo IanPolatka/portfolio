@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/BlogPost.astro";
+import Layout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import wsc from "../assets/wsc/wsc-banner-dark.jpg";
 import currentSite from "../assets/wsc/existing-site.jpg";
@@ -12,13 +12,14 @@ import aboutPage from "../assets/wsc/about-page.jpg";
 ---
 
 <Layout
-  title="Winter Sports Clinic Case Study"
-  description="Lorem ipsum dolor sit amet"
-  pubDate={new Date("August 08 2021")}
+  title="Ian Polatka | Winter Sports Clinic Website Refresh"
+  description="See how a site that hadn’t had a visual update in roughly 10 years
+            was restructured to meet the changing user’s need while at the same
+            time giving it a more modern look and feel."
 >
   <section class="border-t border-gray-300">
     <div
-      class="container mx-auto py-[40px] lg:py-[50px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+      class="container mx-auto py-10 lg:py-12.5 lg:px-15 md:border-l md:border-r border-gray-300"
     >
       <div class="flex flex-col w-full justify-center">
         <div class="w-full px-7 md:px-0 md:w-2/3 mx-auto">

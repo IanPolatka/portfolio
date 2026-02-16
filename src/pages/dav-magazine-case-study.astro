@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/BlogPost.astro";
+import Layout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import dav from "../assets/dav-magazine/dav-banner-dark.jpg";
 import currentMagazine from "../assets/dav-magazine/current-magazine.jpg";
@@ -13,9 +13,11 @@ import wideArticleRow from "../assets/dav-magazine/wide-article-row.jpg";
 ---
 
 <Layout
-  title="DAV Magazine Case Study"
-  description="Lorem ipsum dolor sit amet"
-  pubDate={new Date("August 08 2021")}
+  title="Ian Polatka | DAV Magazine Case Study"
+  description="DAV’s Magazine, a veteran magazine for those who served, has been
+              in a printed circulation since the 1960s. Limited magazine
+              articles were posted on DAV’s website, and it was requested that a
+              more robust magazine section be built out on the website."
 >
   <section class="default-background border-t border-gray-300">
     <div
