@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/BlogPost.astro";
+---
+
+<Layout
+  title="DAV Magazine Case Study"
+  description="Lorem ipsum dolor sit amet"
+  pubDate={new Date("August 08 2021")}
+>
+  <section class="default-background border-t border-gray-300 px-7 md:px-0">
+    <div
+      class="container mx-auto py-10 lg:py-12.5 lg:px-15 md:border-l md:border-r border-gray-300"
+    >
+      <div class="animate-slide-fade">
+        <div class="mb-4">
+          <h1 class="text-3xl font-semibold text-brand-blue mb-2">
+            Bummer, I can't seem to find this page.
+          </h1>
+          <p class="text-xl md:w-3/5 mb-4 leading-8">
+            You can go back to the home page by clicking <a href="/">here</a>,
+            or you can get in touch with me through email at <a
+              href="mailto:ianpolatka@gmail.com">ianpolatka@gmail.com</a
+            >.
+          </p>
+          <p class="text-xl md:w-3/5 mb-4 md:mb-0 leading-8">
+            To see my professional experience, you can view my resumé <a
+              href="/ian-polatka-resume.pdf"
+              target="_blank">here</a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
