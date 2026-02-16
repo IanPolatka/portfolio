@@ -14,6 +14,7 @@ interface Props {
 const {
   title = "Ian Polatka",
   description = "UI/UX Designer from The Commonwealth of Kentucky",
+  ogImage = "/social-media-graphic.png",
 } = Astro.props;
 ---
 
@@ -22,7 +23,17 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <SEO title={title} description={description} />
+    <SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title: title,
+          type: "website",
+          image: ogImage,
+        },
+      }}
+    />
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
