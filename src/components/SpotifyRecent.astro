@@ -7,7 +7,7 @@ const tracks = data.items;
 
 <section class="spotify-green-background border-t border-gray-300 px-2 md:px-0">
   <div
-    class="container mx-auto py-[40px] lg:py-[50px] px-[20px] lg:px-[60px] md:border-l md:border-r border-gray-300"
+    class="container mx-auto py-10 lg:py-12.5 px-5 lg:px-15 md:border-l md:border-r border-gray-300"
   >
     <div class="lg:flex items-start justify-between mb-4">
       <div class="lg:pr-6 mb-6 lg:mb-0">
@@ -24,7 +24,7 @@ const tracks = data.items;
         >
         <h2 class="text-2xl font-semibold text-black mb-1">My Spotify List</h2>
         <p class="mb-4 md:mb-0">
-          These are the latest songs I’ve been grooving too
+          These are the latest songs I've been grooving too
         </p>
       </div>
       <div class="inline-flex">
@@ -49,27 +49,47 @@ const tracks = data.items;
         </a>
       </div>
     </div>
-    <ul class="grid grid-cols-2 md:grid-cols-4 gap-5 lg:grid-cols-5">
+    <ul class="grid grid-cols-2 md:grid-cols-4 gap-5 lg:grid-cols-6">
       {
-        tracks?.map(({ track }) => (
-          <li class="flex flex-col">
-            <img
-              src={track.album.images[0].url}
-              alt={track.album.name}
-              width="640"
-              height="640"
-              class="aspect-square w-full rounded-md object-cover mb-2"
-            />
+        tracks?.map(({ track }) => {
+          // Logic to truncate the song title
+          const words = track.name.split(" ");
+          const truncatedName =
+            words.length > 8 ? words.slice(0, 8).join(" ") + "..." : track.name;
+          return (
+            <li class="flex flex-col">
+              <a
+                href={track.external_urls.spotify}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group block"
+              >
+                <img
+                  src={track.album.images[0].url}
+                  alt={track.album.name}
+                  width="640"
+                  height="640"
+                  class="aspect-square w-full rounded-md object-cover mb-2"
+                />
+              </a>
 
-            <div class="flex flex-col">
-              <span class="text-spotify-green text-xs font-bold">
-                {track.artists.map((a) => a.name).join(", ")}
-              </span>
-              <strong class="text-black mb-1">{track.name}</strong>
-              <span class="text-xs text-gray-500">{track.album.name}</span>
-            </div>
-          </li>
-        ))
+              <div class="flex flex-col">
+                <span class="text-spotify-green text-xs font-bold">
+                  {track.artists.map((a) => a.name).join(", ")}
+                </span>
+                <a
+                  href={track.external_urls.spotify}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group block"
+                >
+                  <strong class="text-black mb-1">{truncatedName}</strong>
+                </a>
+                <span class="text-xs text-gray-500">{track.album.name}</span>
+              </div>
+            </li>
+          );
+        })
       }
     </ul>
   </div>
