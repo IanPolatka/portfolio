@@ -4,17 +4,36 @@ import { Image } from "astro:assets";
 import wsc from "../assets/wsc/wsc-banner-dark.jpg";
 import currentSite from "../assets/wsc/existing-site.jpg";
 import moodBoard from "../assets/wsc/mood-board.jpg";
-import styleGuide from "../assets/wsc/style-guide.png";
-import fonts from "../assets/wsc/fonts.png";
+import colors from "../assets/wsc/wsc-colors.jpg";
+import bitter from "../assets/wsc/wsc-bitter.jpg";
+import roboto from "../assets/wsc/wsc-roboto.jpg";
+import patterns from "../assets/wsc/wsc-patterns-images.jpg";
+import typography from "../assets/wsc/wsc-typography.jpg";
+import buttons from "../assets/wsc/wsc-buttons.jpg";
 import icons from "../assets/wsc/icons.png";
-import homePage from "../assets/wsc/home-page.jpg";
-import aboutPage from "../assets/wsc/about-page.jpg";
+import homePage from "../assets/wsc/wsc-home-page.jpg";
+import desktopSummary from "../assets/wsc/wsc-desktop-summary.jpg";
+import mobileSummary from "../assets/wsc/wsc-mobile-summary.jpg";
+import desktopThirds from "../assets/wsc/components/wsc-desktop-thirds.jpg";
+
+import header from "../assets/wsc/components/wsc-header.jpg";
+import footer from "../assets/wsc/components/wsc-footer.jpg";
+import ctaBox from "../assets/wsc/components/wsc-cta-box.jpg";
+import cards from "../assets/wsc/components/wsc-category-icon-cards.jpg";
+import contentBox from "../assets/wsc/components/wsc-content-box.jpg";
+import downloadableAssetsBox from "../assets/wsc/components/wsc-downloadable-assets-box.jpg";
+import contactBoxes from "../assets/wsc/components/wsc-contact-boxes.jpg";
+import informationBox from "../assets/wsc/components/wsc-information-box.jpg";
+import freedomAwardBox from "../assets/wsc/components/wsc-freedom-award-box.jpg";
+import buttonBlock from "../assets/wsc/components/wsc-button-block.jpg";
+import pageTitleBox from "../assets/wsc/components/wsc-page-title-box.jpg";
+import imageGrid from "../assets/wsc/components/wsc-image-grid.jpg";
 ---
 
 <Layout
   title="Ian Polatka | Winter Sports Clinic Website Refresh"
-  description="See how a site that hadn’t had a visual update in roughly 10 years
-            was restructured to meet the changing user’s need while at the same
+  description="See how a site that hadn't had a visual update in roughly 10 years
+            was restructured to meet the changing user's need while at the same
             time giving it a more modern look and feel."
   ogImage="/social-media-graphic.png"
 >
@@ -53,13 +72,13 @@ import aboutPage from "../assets/wsc/about-page.jpg";
           <p class="mb-4 leading-8">
             Participating Veterans experience "Miracles on a Mountainside" as
             they are provided with training in adaptive Alpine and Nordic
-            skiing, sled hockey, scuba diving, rock wall climbing and a number
-            of other adaptive activities, sports and education.
+            skiing, sled hockey, scuba diving, rock wall climbing, and a number
+            of other adaptive activities, sports, and education.
           </p>
 
           <p class="mb-4 leading-8">
             The clinic, which began in 1987 with 90 participants, has grown to
-            assist nearly 400 profoundly disabled Veterans.
+            assist nearly 400 profoundly disabled veterans.
           </p>
         </div>
       </div>
@@ -96,7 +115,30 @@ import aboutPage from "../assets/wsc/about-page.jpg";
           <h2 class="text-2xl font-semibold mb-5">Feature Goals</h2>
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <!-- Grid Items -->
-            <div class="bg-sky-50 border border-sky-700 p-4">
+            <div
+              class="bg-sky-50 border border-sky-700 p-4 rounded text-center"
+            >
+              <div class="flex justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="p-2 bg-white border border-sky-700 rounded-full mb-2 stroke-sky-700"
+                  ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                  ></path><path
+                    d="M5 5a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2l0 -2"
+                  ></path><path d="M19 6h1a2 2 0 0 1 2 2a5 5 0 0 1 -5 5l-5 0v2"
+                  ></path><path
+                    d="M10 16a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1l0 -4"
+                  ></path></svg
+                >
+              </div>
               <p class="!text-sky-700 font-semibold mb-2">
                 1. Modern Coat of Paint
               </p>
@@ -104,16 +146,61 @@ import aboutPage from "../assets/wsc/about-page.jpg";
                 Bring the look and feel into the last few years.
               </p>
             </div>
-            <div class="bg-sky-50 border border-sky-700 p-4">
+            <div
+              class="bg-sky-50 border border-sky-700 p-4 rounded text-center"
+            >
+              <div class="flex justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="p-2 bg-white border border-sky-700 rounded-full mb-2 stroke-sky-700"
+                  ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                  ></path><path d="M15 3v4a1 1 0 0 0 1 1h4"></path><path
+                    d="M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2"
+                  ></path><path
+                    d="M16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"
+                  ></path></svg
+                >
+              </div>
               <p class="!text-sky-700 font-semibold mb-2">
                 2. Restructure Content
               </p>
               <p class="!text-sky-700">
-                Focus on core user groups, participant, volunteer, sponsor, and
+                Focus on core user groups: participant, volunteer, sponsor, and
                 donor. Drive user flow to facilitate each of their needs/wants.
               </p>
             </div>
-            <div class="bg-sky-50 border border-sky-700 p-4">
+            <div
+              class="bg-sky-50 border border-sky-700 p-4 rounded text-center"
+            >
+              <div class="flex justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="p-2 bg-white border border-sky-700 rounded-full mb-2 stroke-sky-700"
+                  ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                  ></path><path d="M9.5 9h3"></path><path d="M4 9h2.5"
+                  ></path><path d="M11 9l3 11l4 -9"></path><path
+                    d="M5.5 9l3.5 11l3 -7"></path><path
+                    d="M18 11c.177 -.528 1 -1.364 1 -2.5c0 -1.78 -.776 -2.5 -1.875 -2.5c-.898 0 -1.125 .812 -1.125 1.429c0 1.83 2 2.058 2 3.571"
+                  ></path><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                  ></path></svg
+                >
+              </div>
               <p class="!text-sky-700 font-semibold mb-2">
                 3. New CMS Migration
               </p>
@@ -163,7 +250,7 @@ import aboutPage from "../assets/wsc/about-page.jpg";
           <h2 class="text-2xl font-semibold mb-5">Mood Board</h2>
           <p class="mb-5 leading-8">
             Once the content restructure was complete, a mood board was created.
-            Since the event largely revolved around winter mountain activities
+            Since the event largely revolved around winter mountain activities,
             looking through mountain landscapes and typography textures started
             the design process.
           </p>
@@ -185,16 +272,76 @@ import aboutPage from "../assets/wsc/about-page.jpg";
         <div class="w-full px-7 md:px-0 md:w-2/3 mx-auto">
           <h2 class="text-2xl font-semibold mb-5">Style Guide</h2>
           <p class="mb-5 leading-8">
-            The existing site did use the brand colors, but didn't expand beyond
-            the blue and red that was present in the logo. A variety of reds,
-            blues, grays, and yellows were added because building with 1 version
-            of each color is limiting and adding different saturations allows
-            more variety in site components.
+            The existing site didn't expand beyond the red and blue colors in
+            the logo. I added a few different color options, as well as the
+            default black and white colors.
           </p>
+
+          <p class="mb-5 leading-8">
+            When thinking through the events the clinic participants would go
+            through, I looked for patterns and images that would highlight
+            thinking you could find winter mountain settings.
+          </p>
+          <p class="mb-5 leading-8">
+            What made sense was straight and curvy patterns, like what you might
+            find on a ski slope. Topographic map patterns, like what you would
+            find on a mountain map. As well as mountain range photos with pine
+            trees, as well as ski slope pictures.
+          </p>
+        </div>
+      </div>
+      <Image
+        src={colors}
+        alt="DAV Magazine Landing Page Case Study"
+        width={1046}
+        sizes="(max-width: 1046px) 100vw, 1046px"
+        densities={[1, 2]}
+        format="webp"
+        quality={90}
+        loading="lazy"
+        decoding="async"
+        class="w-full mx-auto mb-10"
+      />
+      <Image
+        src={patterns}
+        alt="DAV Magazine Landing Page Case Study"
+        width={1046}
+        sizes="(max-width: 1046px) 100vw, 1046px"
+        densities={[1, 2]}
+        format="webp"
+        quality={90}
+        loading="lazy"
+        decoding="async"
+        class="w-full mx-auto mb-10"
+      />
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mx-4 lg:mx-0 mb-10">
+        <div>
           <Image
-            src={styleGuide}
-            alt="Winter Sports Clinic Case Study"
-            class="w-full border border-gray-300 aspect-auto mx-auto"
+            src={typography}
+            alt="DAV Magazine Landing Page Case Study"
+            width={768}
+            sizes="(max-width: 1600px) 100vw, 1600px"
+            densities={[1, 2]}
+            format="webp"
+            quality={90}
+            loading="lazy"
+            decoding="async"
+            class="w-full mx-auto mb-4"
+          />
+        </div>
+        <div>
+          <Image
+            src={buttons}
+            alt="DAV Magazine Landing Page Case Study"
+            width={768}
+            sizes="(max-width: 768px) 100vw, 768px"
+            densities={[1, 2]}
+            format="webp"
+            quality={90}
+            loading="lazy"
+            decoding="async"
+            class="w-full mx-auto"
           />
         </div>
       </div>
@@ -215,10 +362,35 @@ import aboutPage from "../assets/wsc/about-page.jpg";
             Bitter font was used which is from the VA site, and Roboto was the
             choice for the body font which is used on the DAV website.
           </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mx-4 lg:mx-0">
+        <div>
           <Image
-            src={fonts}
-            alt="Winter Sports Clinic Case Study"
-            class="w-full border border-gray-300 aspect-auto mx-auto"
+            src={bitter}
+            alt="DAV Magazine Landing Page Case Study"
+            width={768}
+            sizes="(max-width: 1600px) 100vw, 1600px"
+            densities={[1, 2]}
+            format="webp"
+            quality={90}
+            loading="lazy"
+            decoding="async"
+            class="w-full mx-auto mb-3"
+          />
+        </div>
+        <div>
+          <Image
+            src={roboto}
+            alt="DAV Magazine Landing Page Case Study"
+            width={768}
+            sizes="(max-width: 1600px) 100vw, 1600px"
+            densities={[1, 2]}
+            format="webp"
+            quality={90}
+            loading="lazy"
+            decoding="async"
+            class="w-full mx-auto"
           />
         </div>
       </div>
@@ -252,17 +424,183 @@ import aboutPage from "../assets/wsc/about-page.jpg";
     >
       <div class="flex flex-col w-full justify-center">
         <div class="w-full px-7 md:px-0 md:w-2/3 mx-auto">
-          <h2 class="text-2xl font-semibold mb-5">Home Page</h2>
+          <h2 class="text-2xl font-semibold mb-5">Components</h2>
           <p class="mb-5 leading-8">
-            Putting everything together the home page resulted in the following.
+            A sampling of the reusable components used across the site.
           </p>
         </div>
+        <div class="grid grid-cols-1 mx-4 gap-10 lg:mx-0 mb-10">
+          <Image
+            src={header}
+            alt="DAV Magazine Landing Page Case Study"
+            width={1024}
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            densities={[1, 2]}
+            format="webp"
+            quality={90}
+            loading="lazy"
+            decoding="async"
+            class="w-full mx-auto"
+          />
+          <Image
+            src={footer}
+            alt="DAV Magazine Landing Page Case Study"
+            width={1024}
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            densities={[1, 2]}
+            format="webp"
+            quality={90}
+            loading="lazy"
+            decoding="async"
+            class="w-full mx-auto"
+          />
+        </div>
+        <video autoplay muted loop playsinline class="mb-10">
+          <source src="/videos/wsc-components.mp4" type="video/mp4" />
+        </video>
+        <div class="grid grid-cols-1 lg:grid-cols-2 mx-4 gap-10 lg:mx-0">
+          <div>
+            <Image
+              src={ctaBox}
+              alt="DAV Magazine Landing Page Case Study"
+              width={768}
+              sizes="(max-width: 768px) 100vw, 768px"
+              densities={[1, 2]}
+              format="webp"
+              quality={90}
+              loading="lazy"
+              decoding="async"
+              class="w-full mx-auto"
+            />
+          </div>
+          <div>
+            <Image
+              src={cards}
+              alt="DAV Magazine Landing Page Case Study"
+              width={768}
+              sizes="(max-width: 768px) 100vw, 768px"
+              densities={[1, 2]}
+              format="webp"
+              quality={90}
+              loading="lazy"
+              decoding="async"
+              class="w-full mx-auto"
+            />
+          </div>
+          <div>
+            <Image
+              src={downloadableAssetsBox}
+              alt="DAV Magazine Landing Page Case Study"
+              width={768}
+              sizes="(max-width: 768px) 100vw, 768px"
+              densities={[1, 2]}
+              format="webp"
+              quality={90}
+              loading="lazy"
+              decoding="async"
+              class="w-full mx-auto"
+            />
+          </div>
+          <div>
+            <Image
+              src={contentBox}
+              alt="DAV Magazine Landing Page Case Study"
+              width={768}
+              sizes="(max-width: 768px) 100vw, 768px"
+              densities={[1, 2]}
+              format="webp"
+              quality={90}
+              loading="lazy"
+              decoding="async"
+              class="w-full mx-auto"
+            />
+          </div>
+          <div>
+            <Image
+              src={contactBoxes}
+              alt="DAV Magazine Landing Page Case Study"
+              width={768}
+              sizes="(max-width: 768px) 100vw, 768px"
+              densities={[1, 2]}
+              format="webp"
+              quality={90}
+              loading="lazy"
+              decoding="async"
+              class="w-full mx-auto"
+            />
+          </div>
+          <div>
+            <Image
+              src={informationBox}
+              alt="DAV Magazine Landing Page Case Study"
+              width={768}
+              sizes="(max-width: 768px) 100vw, 768px"
+              densities={[1, 2]}
+              format="webp"
+              quality={90}
+              loading="lazy"
+              decoding="async"
+              class="w-full mx-auto"
+            />
+          </div>
+          <div>
+            <Image
+              src={freedomAwardBox}
+              alt="DAV Magazine Landing Page Case Study"
+              width={768}
+              sizes="(max-width: 768px) 100vw, 768px"
+              densities={[1, 2]}
+              format="webp"
+              quality={90}
+              loading="lazy"
+              decoding="async"
+              class="w-full mx-auto"
+            />
+          </div>
+          <div>
+            <Image
+              src={buttonBlock}
+              alt="DAV Magazine Landing Page Case Study"
+              width={768}
+              sizes="(max-width: 768px) 100vw, 768px"
+              densities={[1, 2]}
+              format="webp"
+              quality={90}
+              loading="lazy"
+              decoding="async"
+              class="w-full mx-auto"
+            />
+          </div>
+          <div>
+            <Image
+              src={pageTitleBox}
+              alt="DAV Magazine Landing Page Case Study"
+              width={768}
+              sizes="(max-width: 768px) 100vw, 768px"
+              densities={[1, 2]}
+              format="webp"
+              quality={90}
+              loading="lazy"
+              decoding="async"
+              class="w-full mx-auto"
+            />
+          </div>
+          <div>
+            <Image
+              src={imageGrid}
+              alt="DAV Magazine Landing Page Case Study"
+              width={768}
+              sizes="(max-width: 768px) 100vw, 768px"
+              densities={[1, 2]}
+              format="webp"
+              quality={90}
+              loading="lazy"
+              decoding="async"
+              class="w-full mx-auto"
+            />
+          </div>
+        </div>
       </div>
-      <Image
-        src={homePage}
-        alt="Winter Sports Clinic Case Study"
-        class="w-full border border-gray-300 aspect-auto mx-auto"
-      />
     </div>
   </section>
 
@@ -272,17 +610,64 @@ import aboutPage from "../assets/wsc/about-page.jpg";
     >
       <div class="flex flex-col w-full justify-center">
         <div class="w-full px-7 md:px-0 md:w-2/3 mx-auto">
-          <h2 class="text-2xl font-semibold mb-5">About Page</h2>
+          <h2 class="text-2xl font-semibold mb-5">Putting It All Together</h2>
           <p class="mb-5 leading-8">
-            The user can see information about the clinic, with the call to
-            action to get involved mid-way down the page.
+            Working off the set of components, the pages came together fitting
+            within the brand guidelines and fulfilling the stated goals.
           </p>
         </div>
       </div>
       <Image
-        src={aboutPage}
-        alt="Winter Sports Clinic Case Study"
-        class="w-full border border-gray-300 aspect-auto mx-auto"
+        src={homePage}
+        alt="DAV Magazine Landing Page Case Study"
+        width={1024}
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        densities={[1, 2]}
+        format="webp"
+        quality={90}
+        loading="lazy"
+        decoding="async"
+        class="w-full mx-auto mb-10"
+      />
+      <div class="grid grid-cols-1 mx-4 gap-10 lg:mx-0 mb-10">
+        <div>
+          <Image
+            src={desktopThirds}
+            alt="DAV Magazine Landing Page Case Study"
+            width={1024}
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            densities={[1, 2]}
+            format="webp"
+            quality={100}
+            loading="lazy"
+            decoding="async"
+            class="w-full mx-auto mb-4"
+          />
+        </div>
+      </div>
+      <Image
+        src={desktopSummary}
+        alt="DAV Magazine Landing Page Case Study"
+        width={1024}
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        densities={[1, 2]}
+        format="webp"
+        quality={90}
+        loading="lazy"
+        decoding="async"
+        class="w-full mx-auto mb-10"
+      />
+      <Image
+        src={mobileSummary}
+        alt="DAV Magazine Landing Page Case Study"
+        width={1024}
+        sizes="(max-width: 1024px) 100vw, 1024px"
+        densities={[1, 2]}
+        format="webp"
+        quality={90}
+        loading="lazy"
+        decoding="async"
+        class="w-full mx-auto"
       />
     </div>
   </section>
@@ -298,31 +683,99 @@ import aboutPage from "../assets/wsc/about-page.jpg";
           </h2>
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <!-- Grid Items -->
-            <div class="bg-green-50 border border-green-700 p-4">
+            <div
+              class="bg-green-50 border border-green-700 p-4 rounded text-center"
+            >
+              <div class="flex justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="p-2 bg-white border border-green-700 rounded-full mb-2 text-green-700"
+                  ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                  ></path><path
+                    d="M8 9a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1l0 -6"
+                  ></path><path d="M3 8l1 0"></path><path d="M3 16l1 0"
+                  ></path><path d="M8 3l0 1"></path><path d="M16 3l0 1"
+                  ></path><path d="M20 8l1 0"></path><path d="M20 16l1 0"
+                  ></path><path d="M8 20l0 1"></path><path d="M16 20l0 1"
+                  ></path></svg
+                >
+              </div>
               <p class="!text-green-700 font-semibold mb-2">
                 1. Updated Design
               </p>
               <p class="!text-green-700">
                 Users will get a sense that this program is still active and
-                thriving when see the site is refreshed with a modern interface.
+                thriving when they see the site is refreshed with a modern
+                interface.
               </p>
             </div>
-            <div class="bg-green-50 border border-green-700 p-4">
+            <div
+              class="bg-green-50 border border-green-700 p-4 rounded text-center"
+            >
+              <div class="flex justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="p-2 bg-white border border-green-700 rounded-full mb-2 text-green-700"
+                  ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                  ></path><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"
+                  ></path><path d="M6 21v-2a4 4 0 0 1 4 -4h.5"></path><path
+                    d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296"
+                  ></path></svg
+                >
+              </div>
               <p class="!text-green-700 font-semibold mb-2">
                 2. User Flow Improvements
               </p>
               <p class="!text-green-700">
-                Users will find what they need faster equaling more
+                Users will find what they need faster, equaling more
                 participants/volunteers and sponsorships/donations.
               </p>
             </div>
-            <div class="bg-green-50 border border-green-700 p-4">
+            <div
+              class="bg-green-50 border border-green-700 p-4 rounded text-center"
+            >
+              <div class="flex justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="p-2 bg-white border border-green-700 rounded-full mb-2 text-green-700"
+                  ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                  ></path><path d="M3 16v-6a2 2 0 1 1 4 0v6"></path><path
+                    d="M3 13h4"></path><path
+                    d="M10 8v6a2 2 0 1 0 4 0v-1a2 2 0 1 0 -4 0v1"></path><path
+                    d="M20.732 12a2 2 0 0 0 -3.732 1v1a2 2 0 0 0 3.726 1.01"
+                  ></path></svg
+                >
+              </div>
               <p class="!text-green-700 font-semibold mb-2">
                 3. Content Management Happiness
               </p>
               <p class="!text-green-700">
-                Content managers will be in the CMS that they are used to using
-                with most of our other DAV managed websites.
+                Content managers will work with the CMS that they are used to
+                using with most of our other DAV-managed websites.
               </p>
             </div>
           </div>
