@@ -7,7 +7,8 @@ import Ian from "../assets/ian.jpeg";
   <div
     class="container mx-auto py-7.5 px-5 lg:px-15 md:border-l md:border-r border-gray-950/5"
   >
-    <nav class="container flex items-center justify-between mx-auto">
+    <nav class="flex items-center justify-between">
+      <!-- Desktop Logo -->
       <div class="hidden md:block">
         <a href="/" class="items-center gap-4 text-xl font-medium md:flex">
           <Image
@@ -15,19 +16,22 @@ import Ian from "../assets/ian.jpeg";
             alt="Ian Polatka"
             class="w-8 h-8 border-2 border-gray-300 rounded-full"
           />
-          Ian Polatka</a
-        >
+          Ian Polatka
+        </a>
       </div>
 
+      <!-- Mobile Logo -->
       <div class="block text-xl font-medium md:hidden">
         <a
           href="/"
           class="flex items-center justify-center w-10 h-10 bg-white border rounded-full border-gray-950/10"
-          >IP</a
         >
+          IP
+        </a>
       </div>
 
-      <div class="flex items-center gap-4">
+      <!-- Desktop Navigation -->
+      <div class="items-center hidden gap-4 md:flex">
         <details class="relative list-none group">
           <summary
             class="flex items-center gap-1 list-none cursor-pointer hover:text-gray-600"
@@ -48,19 +52,21 @@ import Ian from "../assets/ian.jpeg";
           </summary>
 
           <div
-            class="absolute left-0 z-50 mt-2 bg-white rounded shadow w-60 ring-1 ring-gray-300/5 ring-opacity-5"
+            class="absolute left-0 z-50 mt-2 bg-white rounded shadow w-60 ring-1 ring-gray-300/5"
           >
             <div class="py-1">
               <a
                 href="/dav-magazine-case-study"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >DAV Digital Magazine</a
               >
+                DAV Digital Magazine
+              </a>
               <a
                 href="/winter-sports-clinic-case-study"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >Winter Sports Clinic Refresh</a
               >
+                Winter Sports Clinic Refresh
+              </a>
             </div>
           </div>
         </details>
@@ -68,23 +74,79 @@ import Ian from "../assets/ian.jpeg";
         <a href="/contact-me">Contact Me</a>
         <a href="/ian-polatka-resume.pdf" target="_blank">Resume</a>
       </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <details class="relative md:hidden group">
+        <summary
+          class="flex items-center justify-center w-10 h-10 border rounded-full cursor-pointer border-gray-950/10"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </summary>
+
+        <!-- Mobile Menu Panel -->
+        <div
+          class="absolute right-0 z-50 w-64 mt-3 bg-white rounded-lg shadow-lg ring-1 ring-gray-200"
+        >
+          <div class="flex flex-col p-4 space-y-3 text-base">
+            <!-- Case Studies Dropdown -->
+            <details class="group/case">
+              <summary class="flex items-center justify-between cursor-pointer">
+                Case Studies
+                <svg
+                  class="w-4 h-4 transition-transform duration-200 ease-out group-open/case:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+
+              <div class="mt-2 ml-2 space-y-2">
+                <a href="/dav-magazine-case-study" class="block text-gray-600">
+                  DAV Digital Magazine
+                </a>
+                <a
+                  href="/winter-sports-clinic-case-study"
+                  class="block text-gray-600"
+                >
+                  Winter Sports Clinic Refresh
+                </a>
+              </div>
+            </details>
+
+            <a href="/contact-me">Contact Me</a>
+            <a href="/ian-polatka-resume.pdf" target="_blank">Resume</a>
+          </div>
+        </div>
+      </details>
     </nav>
   </div>
 </header>
 
 <style>
-  /* Hides the default browser arrow on the summary element */
   summary::-webkit-details-marker {
     display: none;
   }
 </style>
 
 <script>
-  // Optional: Close dropdown when clicking elsewhere
+  // Close all dropdowns when clicking outside
   document.addEventListener("click", (e) => {
     const details = document.querySelectorAll("details");
     details.forEach((detail) => {
-      if (!detail.contains(e.target as Node)) {
+      if (!detail.contains(e.target)) {
         detail.removeAttribute("open");
       }
     });
