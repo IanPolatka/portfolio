@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import SpotifyRecent from "./SpotifyRecent.astro";
+import Dribbble from "../assets/wsc/wsc-mobile-summary.jpg";
+---
+
+<section class="px-2 border-t border-gray-950/5 md:px-0">
+  <div
+    class="container mx-auto pt-10 lg:pt-12.5 px-5 lg:px-15 md:border-l md:border-r border-gray-950/5 pb-4"
+  >
+    <div class="mb-8 md:flex md:gap-15">
+      <div class="grid items-center gap-8 md:grid-cols-2 bg-tan-base md:h-105">
+        <!-- Image -->
+        <div class="order-1 h-full md:order-2">
+          <Image
+            src={Dribbble}
+            alt="DAV Magazine Landing Page Case Study"
+            class="object-cover w-full h-full bg-tan-base"
+          />
+        </div>
+
+        <!-- Text -->
+        <div
+          class="flex flex-col items-start justify-center order-2 px-16 py-8 md:order-1"
+        >
+          <h4 class="mb-5 font-semibold text-black text-h4">
+            Latest Dribbble Shots
+          </h4>
+
+          <p class="mb-4">
+            Dribbble is an online platform for creatives to showcase their work
+          </p>
+
+          <a href="https://dribbble.com/ianpolatka" class="btn" target="_blank">
+            View My Dribbble Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<SpotifyRecent />

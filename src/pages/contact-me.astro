@@ -1,4 +1,5 @@
 ---
+import DribbbleSpotify from "../components/DribbbleSpotify.astro";
 import Layout from "../layouts/BaseLayout.astro";
 ---
 
@@ -7,21 +8,19 @@ import Layout from "../layouts/BaseLayout.astro";
   description="Get in touch with me"
   ogImage="/social-media-graphic.png"
 >
-  <section class="default-background border-t border-gray-300 px-7 md:px-0">
+  <section class="border-t border-gray-950/5 default-background px-7 md:px-0">
     <div
-      class="container mx-auto py-10 lg:py-12.5 lg:px-15 md:border-l md:border-r border-gray-300"
+      class="container mx-auto py-10 lg:py-12.5 lg:px-15 md:border-l md:border-r border-gray-950/5"
     >
       <div class="animate-slide-fade">
         <div class="mb-4">
-          <h1 class="text-3xl font-semibold text-brand-blue mb-2">
-            Contact Me
-          </h1>
-          <p class="text-xl mb-4 leading-8">
+          <h1 class="mb-4 font-semibold text-h2 text-blue-dark">Contact Me</h1>
+          <p class="mb-4 text-blue-dark! md:w-3/5">
             You can get in touch with me through email at <a
               href="mailto:ianpolatka@gmail.com">ianpolatka@gmail.com</a
             >.
           </p>
-          <p class="text-xl md:w-3/5 mb-4 md:mb-0 leading-8">
+          <p class="mb-4 text-blue-dark! md:w-3/5 md:mb-0">
             To see my professional experience, you can view my resume <a
               href="/ian-polatka-resume.pdf"
               target="_blank">here</a
@@ -31,4 +30,5 @@ import Layout from "../layouts/BaseLayout.astro";
       </div>
     </div>
   </section>
+  <DribbbleSpotify />
 </Layout>

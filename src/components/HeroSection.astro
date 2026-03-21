@@ -1,31 +1,42 @@
----
-import { Image } from "astro:assets";
-import Ian from "../assets/ian.jpeg";
----
-
-<section class="bg-transparent border-t border-gray-300 px-2 md:px-0">
+<section class="px-2 border-t bg-blue-base border-gray-950/5 md:px-0">
   <div
-    class="container mx-auto py-10 lg:py-12.5 px-5 lg:px-15 md:border-l md:border-r border-gray-300"
+    class="container px-5 mx-auto py-15 md:py-25 md:border-l md:border-r border-gray-950/5"
   >
-    <div class="animate-slide-fade">
-      <Image
-        src={Ian}
-        alt="Ian Polatka"
-        class="rounded-full border border-gray-300 mb-4 h-30 w-30"
-      />
+    <div class="mx-auto text-center md:w-2/3 animate-fade-up">
       <div class="mb-4">
-        <h1 class="text-3xl font-semibold text-brand-blue mb-2">
-          Hi, I'm Ian Polatka
+        <h1
+          class="mb-8 font-semibold transition-all duration-700 ease-out translate-y-6 opacity-0 md:text-h1 text-h2 text-blue-dark"
+          id="hero-title"
+        >
+          Designing polished interfaces for products people
+          <span class="relative inline-block whitespace-nowrap">
+            rely on
+            <img
+              src="accent-line.png"
+              class="absolute left-0 w-full top-full"
+              aria-hidden="true"
+            />
+          </span>
         </h1>
-        <p class="text-2xl md:w-3/5 mb-4 md:mb-0 leading-8">
-          A <span class="text-black font-medium">UI/UX Designer</span> from <span
-            class="text-black font-medium">The Commonwealth of Kentucky</span
-          >. I help businesses figure out the best ways to improve their
-          websites, so customers are happier and their needs are met.
+
+        <p
+          class="text-blue-dark! text-body-lg!
+           opacity-0 translate-y-6
+           transition-all duration-700 ease-out delay-200"
+          id="hero-text"
+        >
+          Hello, I'm <strong>Ian Polatka</strong>, a <strong>UI Designer</strong
+          >
+          from The Commonwealth of Kentucky. I help businesses figure out the best
+          ways to improve their websites, so customers are happier and their needs
+          are met.
         </p>
       </div>
-      <div class="flex flex-col md:flex-row gap-4 justify-start">
-        <a href="/contact-me" class="btn"
+      <div
+        class="flex flex-col justify-center gap-4 mt-8 transition-all duration-700 ease-out translate-y-6 opacity-0 md:flex-row delay-400"
+        id="hero-buttons"
+      >
+        <a href="/contact-me" class="btn btn-large"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
@@ -41,7 +52,7 @@ import Ian from "../assets/ian.jpeg";
         <a
           href="/ian-polatka-resume.pdf"
           target="_blank"
-          class="btn btn-white inline-flex items-center gap-2"
+          class="inline-flex items-center gap-2 btn btn-transparent btn-large"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -64,3 +75,13 @@ import Ian from "../assets/ian.jpeg";
     </div>
   </div>
 </section>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    document
+      .querySelectorAll("#hero-title, #hero-text, #hero-buttons")
+      .forEach((el) => {
+        el.classList.remove("opacity-0", "translate-y-6");
+      });
+  });
+</script>

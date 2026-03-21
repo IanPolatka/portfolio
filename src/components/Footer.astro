@@ -1,24 +1,19 @@
 ---
 const today = new Date();
-import SpotifyRecent from "./SpotifyRecent.astro";
-import DribbbleRecent from "./DribbbleRecent.astro";
 import FactGenerator from "./FactGenerator.astro";
 ---
 
-<DribbbleRecent />
-<SpotifyRecent />
-
-<footer class="border-t border-gray-300 bg-white px-2 md:px-0">
+<footer class="px-2 border-t border-gray-50/10 md:px-0 bg-blue-darkest">
   <div
-    class="container mx-auto py-5 px-5 lg:py-10 lg:px-15 md:border-l md:border-r border-gray-300"
+    class="container px-5 py-5 mx-auto border-gray-50/10 lg:py-10 lg:px-15 md:border-l md:border-r"
   >
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
       <div>
-        <p class="font-semibold mb-2 !text-black">Connect With Me</p>
+        <p class="mb-2 font-semibold">Connect With Me</p>
         <ul class="flex gap-2">
           <li>
             <a
-              class="size-8 flex items-center justify-center rounded-full fill-spotify-green hover:opacity-60 transition hover:cursor-pointer"
+              class="flex items-center justify-center transition rounded-full size-8 fill-spotify-green hover:opacity-60 hover:cursor-pointer"
               href="https://open.spotify.com/user/ianpolatka"
               target="_blank"
               ><svg
@@ -53,7 +48,7 @@ import FactGenerator from "./FactGenerator.astro";
             <a
               href="https://www.linkedin.com/in/ianpolatka"
               target="_blank"
-              class="size-8 flex items-center justify-center rounded-full linkedin-blue-background p-2 hover:opacity-60 transition"
+              class="flex items-center justify-center p-2 transition rounded-full size-8 linkedin-blue-background hover:opacity-60"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
@@ -69,11 +64,11 @@ import FactGenerator from "./FactGenerator.astro";
             <a
               href="https://www.x.com/ianpolatka"
               target="_blank"
-              class="size-8 flex items-center justify-center rounded-full bg-black p-2 hover:opacity-60 transition"
+              class="flex items-center justify-center p-2 transition bg-white rounded-full size-8 hover:opacity-60"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
-                class="fill-white"
+                class="fill-black"
               >
                 <path
                   d="M357.2 48L427.8 48 273.6 224.2 455 464 313 464 201.7 318.6 74.5 464 3.8 464 168.7 275.5-5.2 48 140.4 48 240.9 180.9 357.2 48zM332.4 421.8l39.1 0-252.4-333.8-42 0 255.3 333.8z"
@@ -85,7 +80,7 @@ import FactGenerator from "./FactGenerator.astro";
             <a
               href="mailto:ian@ianpolatka.com"
               target="_blank"
-              class="size-8 flex items-center justify-center rounded-full bg-sky-600 p-2 hover:opacity-60 transition"
+              class="flex items-center justify-center p-2 transition rounded-full size-8 bg-sky-600 hover:opacity-60"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -100,33 +95,33 @@ import FactGenerator from "./FactGenerator.astro";
         </ul>
       </div>
       <div class="">
-        <p class="font-semibold mb-2 !text-black">Random Trivia About Me</p>
+        <p class="mb-2 font-semibold text-white">Random Trivia About Me</p>
         <FactGenerator />
       </div>
     </div>
   </div>
-</footer>
-<div
-  class="border-t border-gray-300 border-b bg-white secondary-footer px-2 md:px-0"
->
   <div
-    class="container mx-auto py-5 px-5 lg:px-15 md:border-l md:border-r border-gray-300"
+    class="px-2 border-t border-b bg-blue-darkest border-gray-50/10 secondary-footer md:px-0"
   >
-    <p class="leading-[2]">
-      &copy; 1984 - {today.getFullYear()} Ian Polatka <span
-        class="px-2 text-sky-300">&bull;</span
-      > Site Built with <a href="https://astro.build/" target="_blank"
-        >AstroJS</a
-      >
-      <span class="px-2 text-sky-300">&bull;</span> Hosted with <a
-        href="https://www.netlify.com/"
-        target="_blank"
-        class="#">Netlify</a
-      >
-      <span class="px-2 text-sky-300">&bull;</span> Versioned with <a
-        href="https://github.com/IanPolatka/portfolio"
-        target="_blank">Github</a
-      >
-    </p>
+    <div
+      class="container px-5 py-5 mx-auto lg:px-15 md:border-l md:border-r border-gray-50/10"
+    >
+      <p class="leading-[2]">
+        &copy; 1984 - {today.getFullYear()} Ian Polatka <span
+          class="px-2 text-gray-50/50">&bull;</span
+        > Site Built with <a href="https://astro.build/" target="_blank"
+          >AstroJS</a
+        >
+        <span class="px-2 text-gray-50/50">&bull;</span> Hosted with <a
+          href="https://www.netlify.com/"
+          target="_blank"
+          class="#">Netlify</a
+        >
+        <span class="px-2 text-gray-50/50">&bull;</span> Versioned with <a
+          href="https://github.com/IanPolatka/portfolio"
+          target="_blank">Github</a
+        >
+      </p>
+    </div>
   </div>
-</div>
+</footer>

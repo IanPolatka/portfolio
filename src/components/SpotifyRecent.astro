@@ -1,96 +1,131 @@
 ---
-import { getRecentlyPlayed } from "../lib/spotify";
 
-const data = await getRecentlyPlayed();
-const tracks = data.items;
 ---
 
-<section class="spotify-green-background border-t border-gray-300 px-2 md:px-0">
+<section class="px-2 border-gray-950/5 md:px-0">
   <div
-    class="container mx-auto py-10 lg:py-12.5 px-5 lg:px-15 md:border-l md:border-r border-gray-300"
+    class="container mx-auto pb-10 lg:pb-12.5 px-5 lg:px-15 md:border-l md:border-r border-gray-950/5"
   >
-    <div class="lg:flex items-start justify-between mb-4">
-      <div class="lg:pr-6 mb-6 lg:mb-0">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-          height="34"
-          width="34"
-          class="mb-2 fill-spotify-green"
-        >
-          <path
-            d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496zM356.7 372.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"
-          ></path></svg
-        >
-        <h2 class="text-2xl font-semibold text-black mb-1">My Spotify List</h2>
-        <p class="mb-4 md:mb-0">
-          These are the latest songs I've been grooving too
-        </p>
+    <div class="grid items-center gap-8 md:grid-cols-2 bg-tan-base">
+      <!-- TRACKS COLUMN -->
+      <div class="order-1 h-full px-10 py-8 md:order-1">
+        <!-- NOW PLAYING -->
+        <div id="spotify-now-playing" class="mb-2">
+          <div class="px-4 py-4 bg-white rounded">Loading current track...</div>
+        </div>
+
+        <!-- RECENT TRACKS -->
+        <ul id="spotify-tracks" class="space-y-2">
+          <li class="px-4 py-4 bg-white rounded">Loading...</li>
+        </ul>
       </div>
-      <div class="inline-flex">
+
+      <!-- TEXT COLUMN -->
+      <div
+        class="flex flex-col items-start justify-center order-2 py-8 ps-8 pe-16 md:order-1"
+      >
+        <h4 class="mb-4 font-semibold text-black text-h4">
+          What I'm Jamming To
+        </h4>
+
+        <p class="mb-4">
+          Here are some of the recent songs that I have been listening to while
+          building user interfaces.
+        </p>
+
         <a
           href="https://open.spotify.com/user/ianpolatka"
-          class="btn btn-spotify mb-4"
+          class="btn"
           target="_blank"
-          >View My Spotify Profile
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
-          </svg>
+        >
+          View My Spotify Profile
         </a>
       </div>
     </div>
-    <ul class="grid grid-cols-2 md:grid-cols-4 gap-5 lg:grid-cols-6">
-      {
-        tracks?.map(({ track }) => {
-          // Logic to truncate the song title
-          const words = track.name.split(" ");
-          const truncatedName =
-            words.length > 8 ? words.slice(0, 8).join(" ") + "..." : track.name;
-          return (
-            <li class="flex flex-col">
-              <a
-                href={track.external_urls.spotify}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="group block"
-              >
-                <img
-                  src={track.album.images[0].url}
-                  alt={track.album.name}
-                  width="640"
-                  height="640"
-                  class="aspect-square w-full rounded-md object-cover mb-2"
-                />
-              </a>
-
-              <div class="flex flex-col">
-                <span class="text-spotify-green text-xs font-bold">
-                  {track.artists.map((a) => a.name).join(", ")}
-                </span>
-                <a
-                  href={track.external_urls.spotify}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="group block"
-                >
-                  <strong class="text-black mb-1">{truncatedName}</strong>
-                </a>
-                <span class="text-xs text-gray-500">{track.album.name}</span>
-              </div>
-            </li>
-          );
-        })
-      }
-    </ul>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    async function fetchSpotifyData() {
+      try {
+        const res = await fetch("/api/spotify");
+        const { featuredTrack, isPlaying, tracks } = await res.json();
+
+        const trackList = document.getElementById("spotify-tracks");
+        const nowPlaying = document.getElementById("spotify-now-playing");
+
+        if (!trackList || !nowPlaying) return;
+
+        // NOW PLAYING
+        if (featuredTrack) {
+          nowPlaying.innerHTML = `
+          <div class="flex items-center gap-4 px-4 py-4 bg-white border border-green-600 rounded">
+
+            <img
+              src="${featuredTrack.album.images[2].url}"
+              class="w-12 h-12 rounded shrink-0"
+            />
+
+            <div>
+              <div class="flex items-center gap-2 text-sm font-semibold text-green-600">
+
+                ${
+                  isPlaying
+                    ? `<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Now Playing`
+                    : `Recently Played`
+                }
+
+              </div>
+
+              <div class="font-semibold text-black">
+                ${featuredTrack.name}
+              </div>
+
+              <div class="text-sm text-black/60">
+                ${featuredTrack.artists.map((a) => a.name).join(", ")}
+              </div>
+            </div>
+
+          </div>
+        `;
+        }
+
+        const recentTracks = isPlaying ? tracks : tracks.slice(1);
+
+        // RECENT TRACKS
+        trackList.innerHTML = recentTracks
+          .map(
+            ({ track }) => `
+            <li>
+              <div class="flex items-center gap-4 px-4 py-3 bg-white rounded">
+
+                <img
+                  src="${track.album.images[2].url}"
+                  class="w-10 h-10 rounded shrink-0"
+                />
+
+                <div>
+                  <div class="font-semibold text-black">
+                    ${track.name}
+                  </div>
+
+                  <div class="text-sm text-black/60">
+                    ${track.artists.map((a) => a.name).join(", ")}
+                  </div>
+                </div>
+
+              </div>
+            </li>
+          `,
+          )
+          .join("");
+      } catch (err) {
+        console.error("Spotify fetch failed:", err);
+      }
+    }
+
+    fetchSpotifyData();
+    setInterval(fetchSpotifyData, 10000);
+  });
+</script>

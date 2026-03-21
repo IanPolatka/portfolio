@@ -1,5 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,600;1,600&family=Inter:ital,opsz@0,14..32;1,14..32&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --color-body-background: #fefdfb;
+
+  --color-tan-base: #f0e9db;
+
+  --color-blue-light: #eef6f7;
+  --color-blue-base: #d9ebed;
+  --color-blue-dark: #1f3e42;
+  --color-blue-darkest: #081011;
+  --color-blue-link: #2f6f73;
+
+  --color-text-body: #2d2d2d;
+
+  --color-accent-green: #d1d12b;
+
+  --text-h1: 44px;
+  --text-h1--line-height: 52px;
+
+  --text-h2: 36px;
+  --text-h2--line-height: 45px;
+
+  --text-h3: 28px;
+  --text-h3--line-height: 36px;
+
+  --text-h4: 22px;
+  --text-h4--line-height: 30px;
+
+  --text-h5: 18px;
+  --text-h5--line-height: 25px;
+
+  --text-h6: 16px;
+  --text-h6--line-height: 24px;
+
+  --text-body: 16px;
+  --text-body--line-height: 28px;
+
+  --text-body-lg: 20px;
+  --text-body-lg--line-height: 32px;
+}
 
 :root {
   --default-background-color: #eef4f6;
@@ -15,33 +55,37 @@
 }
 
 body {
-  background-color: var(--background-default);
-  color: var(--deafult-body-color);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 a {
-  color: var(--link-color);
+  color: var(--color-blue-dark);
+  text-decoration: underline;
 }
 
 a:hover {
-  @apply opacity-80 transition ease-in duration-150;
+  @apply transition duration-150 ease-in opacity-80;
 }
 
 p {
-  color: var(--default-text-color);
+  color: var(--color-text-body);
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
 }
 
-/* h1,
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
-} */
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
 
 .default-background {
   background-color: var(--background-default);
@@ -93,29 +137,16 @@ h6 {
   }
 }
 
-.large-paragraph {
-  font-size: 1.25rem;
-  color: var(--default-text-color);
-}
-
-@keyframes slideFadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-slide-fade {
-  /* Adjust '0.8s' for speed and 'ease-out' for the feel */
-  animation: slideFadeIn 0.8s ease-out forwards;
-}
-
 ul {
   color: var(--default-text-color);
+}
+
+/******************************
+Containers
+*******************************/
+
+.container-box {
+  @apply mx-auto py-10 px-7 lg:py-12.5 lg:px-15 md:border-l md:border-r border-gray-950/5;
 }
 
 /******************************
@@ -123,50 +154,70 @@ Buttons
 *******************************/
 
 .btn {
-  @apply flex items-center justify-center font-medium rounded-md border py-2.5 px-6 gap-3 fill-white;
-  border: 1px solid var(--link-color);
-  background: var(--link-color);
+  @apply w-auto inline-flex items-center justify-center rounded-md border py-2.5 px-6 gap-3 fill-white;
+  border: 1px solid var(--color-blue-link);
+  background: var(--color-blue-link);
   color: white;
-}
-
-.btn-white {
-  @apply text-blue-600 bg-white border-gray-300;
+  text-decoration: none;
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .btn-transparent {
-  color: var(--link-color);
+  color: var(--color-blue-link);
   background: transparent;
-  fill: var(--link-color);
+  fill: var(--color-blue-link);
 }
 
-.btn-dribbble {
-  color: white;
-  background-color: var(--dribbble-pink);
-  border-color: var(--dribbble-pink);
-}
-
-.btn-spotify {
-  color: white;
-  background-color: var(--spotify-green);
-  border-color: var(--spotify-green);
+.btn-large {
+  padding: 14px 24px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 /******************************
 Header
 *******************************/
 
+header {
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.15rem !important;
+}
+
 header a {
   color: #000;
+  text-decoration: none;
 }
 
 /******************************
 Footer
 *******************************/
 
-.secondary-footer a {
-  @apply font-semibold text-black hover:opacity-70 transition duration-150 ease-in;
+footer p {
+  color: #fff;
 }
 
-.secondary-footer a:hover {
-  color: #000;
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out forwards;
 }

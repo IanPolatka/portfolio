@@ -1,24 +1,25 @@
 ---
+import DribbbleSpotify from "../components/DribbbleSpotify.astro";
 import Layout from "../layouts/BaseLayout.astro";
 ---
 
 <Layout title="404 Error" description="This page can't be found">
-  <section class="default-background border-t border-gray-300 px-7 md:px-0">
+  <section class="border-t border-gray-950/5 default-background px-7 md:px-0">
     <div
-      class="container mx-auto py-10 lg:py-12.5 lg:px-15 md:border-l md:border-r border-gray-300"
+      class="container mx-auto py-10 lg:py-12.5 lg:px-15 md:border-l md:border-r border-gray-950/5"
     >
       <div class="animate-slide-fade">
         <div class="mb-4">
-          <h1 class="text-3xl font-semibold text-brand-blue mb-2">
+          <h1 class="mb-4 font-semibold text-h2 text-blue-dark">
             Bummer, I can't seem to find this page.
           </h1>
-          <p class="text-xl md:w-3/5 mb-4 leading-8">
+          <p class="mb-4 md:w-3/5 text-blue-dark!">
             You can go back to the home page by clicking <a href="/">here</a>,
             or you can get in touch with me through email at <a
               href="mailto:ianpolatka@gmail.com">ianpolatka@gmail.com</a
             >.
           </p>
-          <p class="text-xl md:w-3/5 mb-4 md:mb-0 leading-8">
+          <p class="mb-4 md:w-3/5 md:mb-0 text-blue-dark!">
             To see my professional experience, you can view my resume <a
               href="/ian-polatka-resume.pdf"
               target="_blank">here</a
@@ -28,4 +29,5 @@ import Layout from "../layouts/BaseLayout.astro";
       </div>
     </div>
   </section>
+  <DribbbleSpotify />
 </Layout>

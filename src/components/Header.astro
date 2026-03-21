@@ -1,24 +1,36 @@
-<header class="bg-transparent">
+---
+import { Image } from "astro:assets";
+import Ian from "../assets/ian.jpeg";
+---
+
+<header class="bg-white">
   <div
-    class="container mx-auto py-7.5 px-5 lg:px-15 md:border-l md:border-r border-gray-300"
+    class="container mx-auto py-7.5 px-5 lg:px-15 md:border-l md:border-r border-gray-950/5"
   >
-    <nav class="flex justify-between items-center container mx-auto">
-      <div class="hidden md:block text-xl font-medium">
-        <a href="/">Ian Polatka</a>
+    <nav class="container flex items-center justify-between mx-auto">
+      <div class="hidden md:block">
+        <a href="/" class="items-center gap-4 text-xl font-medium md:flex">
+          <Image
+            src={Ian}
+            alt="Ian Polatka"
+            class="w-8 h-8 border-2 border-gray-300 rounded-full"
+          />
+          Ian Polatka</a
+        >
       </div>
 
-      <div class="block md:hidden text-xl font-medium">
+      <div class="block text-xl font-medium md:hidden">
         <a
           href="/"
-          class="flex items-center justify-center bg-white w-10 h-10 border border-gray-300 rounded-full"
+          class="flex items-center justify-center w-10 h-10 bg-white border rounded-full border-gray-950/10"
           >IP</a
         >
       </div>
 
-      <div class="text-sm sm:text-base md:text-lg flex gap-4 items-center">
-        <details class="relative group list-none">
+      <div class="flex items-center gap-4">
+        <details class="relative list-none group">
           <summary
-            class="flex items-center gap-1 cursor-pointer list-none hover:text-gray-600"
+            class="flex items-center gap-1 list-none cursor-pointer hover:text-gray-600"
           >
             Case Studies
             <svg
@@ -36,7 +48,7 @@
           </summary>
 
           <div
-            class="absolute left-0 mt-2 w-48 shadow-lg bg-white ring-1 ring-gray-300 ring-opacity-5 z-50"
+            class="absolute left-0 z-50 mt-2 bg-white rounded shadow w-60 ring-1 ring-gray-300/5 ring-opacity-5"
           >
             <div class="py-1">
               <a
