@@ -20,9 +20,7 @@
         </h1>
 
         <p
-          class="text-blue-dark! text-body-lg!
-           opacity-0 translate-y-6
-           transition-all duration-700 ease-out delay-200"
+          class="text-blue-dark! text-body-lg! opacity-0 translate-y-6 transition-all duration-700 ease-out"
           id="hero-text"
         >
           Hello, I'm <strong>Ian Polatka</strong>, a <strong>UI Designer</strong
@@ -33,7 +31,7 @@
         </p>
       </div>
       <div
-        class="flex flex-col justify-center gap-4 mt-8 transition-all duration-700 ease-out translate-y-6 opacity-0 md:flex-row delay-400"
+        class="flex flex-col justify-center gap-4 mt-8 transition-all duration-700 ease-out translate-y-6 opacity-0 md:flex-row"
         id="hero-buttons"
       >
         <a href="/contact-me" class="btn btn-large"
@@ -49,6 +47,7 @@
           >
           Contact Me</a
         >
+
         <a
           href="/ian-polatka-resume.pdf"
           target="_blank"
@@ -74,14 +73,20 @@
       </div>
     </div>
   </div>
-</section>
 
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    document
-      .querySelectorAll("#hero-title, #hero-text, #hero-buttons")
-      .forEach((el) => {
-        el.classList.remove("opacity-0", "translate-y-6");
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const elements = [
+        document.getElementById("hero-title"),
+        document.getElementById("hero-text"),
+        document.getElementById("hero-buttons"),
+      ];
+
+      elements.forEach((el, i) => {
+        setTimeout(() => {
+          el?.classList.remove("opacity-0", "translate-y-6");
+        }, i * 200); // 0ms, 200ms, 400ms
       });
-  });
-</script>
+    });
+  </script>
+</section>
