@@ -6,8 +6,8 @@ export async function GET(context) {
   const projects = await getCollection("projects");
 
   return rss({
-    title: "Ian Polatka | UI/UX Designer",
-    description: "UI/UX Designer from The Commonwealth of Kentucky",
+    title: "Ian Polatka | User Interface Designer",
+    description: "User Interface Designer from The Commonwealth of Kentucky",
     site: context.site,
     items: projects.map((project) => ({
       title: project.data.title,
